@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Print Label</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Print Shelf Labels</h1>
+    <p>Enter the item name and the price or just the name.</p>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><input id="myInput" class="border-0"><input id="myButton" type="button"value="Toggle Border"></div>
+    <div class="col-sm-4"><input id="myInput1"><input id="myButton1" type="button"value="Toggle Border"></div>
+    <div class="col-sm-4"><input id="myInput1"><input id="myButton1" type="button"value="Toggle Border"></div>
+  </div>
+</div>
+
+
+</body>
+
+<script>
+  $("#myButton").click(function() {
+    $("#myInput").toggleClass('border-0')
+  });
+</script>
+
+<script>
+  window.print()
+</script>
+
+<style>
+        body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #FAFAFA;
+        font: 12pt "Tahoma";
+    }
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 20mm;
+        margin: 10mm auto;
+        border: 1px #D3D3D3 solid;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    @media print {
+        html, body {
+            width: 210mm;
+            height: 297mm;
+        }
+        .page {
+            margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+        }
+    }
+</style>
+</html>
