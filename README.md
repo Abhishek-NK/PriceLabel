@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a simple project to print simple shelf price labels for my local shop.
+This is a simple project to print shelf price labels for my local shop.
 
 <br>
 
